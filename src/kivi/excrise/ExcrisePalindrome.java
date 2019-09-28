@@ -9,7 +9,7 @@ public class ExcrisePalindrome {
 			int thousands=(i/1000)%10;
 			int tenofthousands=(i/10000)%10;
 			if(units==tenofthousands && tens==thousands) {
-				System.out.println("Palindrome:"+i);
+				System.out.println("Palindrome:  "+i);
 			}
 		}
 	}
