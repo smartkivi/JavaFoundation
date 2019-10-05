@@ -8,29 +8,30 @@ public class SwitchExcrise {
 		int day=sc.nextInt();
 		switch(day) {
 		   	case 1:
-			   System.out.println("ÐÇÆÚÒ»");
+			   System.out.println("ï¿½ï¿½ï¿½ï¿½Ò»");
 			   break;
 		   	case 2:
-			   System.out.println("ÐÇÆÚ¶þ");
+			   System.out.println("ï¿½ï¿½ï¿½Ú¶ï¿½");
 			   break;
 		   	case 3:
-			   System.out.println("ÐÇÆÚÈý");
+			   System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			   break;
 		   	case 4:
-			   System.out.println("ÐÇÆÚËÄ");
+			   System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			   break;
 		   	case 5:
-			   System.out.println("ÐÇÆÚÎå");
+			   System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			   break;
 		   	case 6:
-			   System.out.println("ÐÇÆÚÁù");
+			   System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			   break;
 		   	case 7:
-			   System.out.println("ÐÇÆÚÌì");
+			   System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			   break;
 			default:
-				System.out.println("·Ç·¨ÊäÈë");
+				System.out.println("ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½");
 				break;
 		}
+		sc.close();
 	}
 }

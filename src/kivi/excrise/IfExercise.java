@@ -8,22 +8,23 @@ public class IfExercise {
 		int max=(a>b)?a:b;
 		System.out.println(max);
 		if(max>=90 && max<=100) {
-			System.out.println("ÓÅÐã");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½");
 		}
 		else if(max>=80 && max<90) {
-			System.out.println("ºÃ");
+			System.out.println("ï¿½ï¿½");
 		}
 		else if(max>=70 && max<80) {
-			System.out.println("Á¼");
+			System.out.println("ï¿½ï¿½");
 		}
 		else if(max>=60 && max<70) {
-			System.out.println("¼°¸ñ");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½");
 		}
 		else if(max<60) {
-			System.out.println("²»¼°¸ñ");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}
 		else {
-			System.out.println("·Ç·¨ÊäÈë");
+			System.out.println("ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}
+		sc.close();
 	}
 }

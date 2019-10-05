@@ -16,6 +16,7 @@ public class Encode {
 		exchange(arr,1,2);
 		int encodeNum=arr[0]+arr[1]*10+arr[2]*100+arr[3]*1000;
 		System.out.println(encodeNum);
+		sc.close();
 	}
 	
 	public static void exchange(int[] arr,int a,int b) {

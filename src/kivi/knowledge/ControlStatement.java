@@ -12,9 +12,9 @@ public class ControlStatement {
 //		}
 		
 //		if((a+b)%2==0) {
-//			System.out.println("Å¼Êý");
+//			System.out.println("Å¼ï¿½ï¿½");
 //		}else {
-//			System.out.println("ÆæÊý");
+//			System.out.println("ï¿½ï¿½ï¿½ï¿½");
 //		}
 		if(a>3)
 		{
@@ -28,6 +28,7 @@ public class ControlStatement {
 		}
 		System.out.println("s:"+s);
 		System.out.println("end");
+		sc.close();
 	}
 	
 }

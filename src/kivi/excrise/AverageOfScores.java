@@ -23,5 +23,6 @@ public class AverageOfScores {
 		}
 		average=average/4;
 		System.out.println("average:"+average);
+		sc.close();
 	}
 }

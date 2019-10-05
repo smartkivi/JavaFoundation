@@ -31,5 +31,6 @@ public class ExcriseSeason {
 				System.out.println("invaild input");
 				break;
 		}
+		sc.close();
 	}
 }

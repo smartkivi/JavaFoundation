@@ -1,6 +1,6 @@
 package kivi.knowledge;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Method {
 	public static void main(String[] args) {
@@ -52,7 +52,7 @@ public class Method {
 	
 	public static void printEach(int num) {
 		if(num<1) {
-			System.out.println("·Ç·¨ÊäÈë");
+			System.out.println("ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}
 		else {
 			for(int i=1;i<=num;i++) {

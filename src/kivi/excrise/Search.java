@@ -16,5 +16,6 @@ public class Search {
 			}
 		}
 		System.out.println("元素所在下标为："+index);
+		sc.close();
 	}
 }

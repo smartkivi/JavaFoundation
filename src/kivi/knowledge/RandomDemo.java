@@ -11,11 +11,12 @@ public class RandomDemo {
 			Scanner sc=new Scanner(System.in);
 			int x=sc.nextInt();
 			if(x==s) {
-				System.out.println("ÏàµÈ");
+				System.out.println("ï¿½ï¿½ï¿½");
 				break;
 			}else {
-				System.out.println("²»ÏàµÈ");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½");
 			}
+			sc.close();
 		}
 		
 	}

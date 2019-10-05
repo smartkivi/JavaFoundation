@@ -10,7 +10,7 @@ public class ArrayExcrise {
 		{
 			arr[i]=r.nextInt(100);
 		}
-		System.out.println("Êı×éÔªËØÒÀ´ÎÎª£º");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½");
 		int max=arr[0];
 		int min=arr[0];
 		for(int i=0;i<arr.length;i++)
@@ -26,5 +26,6 @@ public class ArrayExcrise {
 		}
 		System.out.println("max:"+max);
 		System.out.println("min:"+min);
+		sc.close();
 	}
 }
