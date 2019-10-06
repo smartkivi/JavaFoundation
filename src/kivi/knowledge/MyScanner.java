@@ -1,4 +1,4 @@
-package kivi.knowledge;
+  package kivi.knowledge;
 import java.util.Scanner;
 public class MyScanner {
 	public static void main(String[] args)
@@ -28,10 +28,12 @@ public class MyScanner {
 //		int temp=(a>b)?a:b;
 //		int max=(temp>c)?temp:c;
 //		System.out.println("max:"+max);
-		double a=sc.nextDouble();
-		double b=sc.nextDouble();
-		System.out.println(a);
-		System.out.println(b);
+//		double a=sc.nextDouble();
+//		double b=sc.nextDouble();
+//		System.out.println(a);
+//		System.out.println(b);
+		String s=sc.nextLine();
+		System.out.println(s);
 		sc.close();
 	}
 }
