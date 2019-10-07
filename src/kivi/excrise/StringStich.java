@@ -7,15 +7,25 @@ public class StringStich {
 	}
 	
 	public static String arrayToString(int[] arr) {
-		String s=new String();
-		s=s+"[";
+//		String s=new String();
+//		s=s+"[";
+//		for(int i=0;i<arr.length;i++) {
+//			s=s+arr[i];
+//			if(i!=(arr.length-1)) {
+//				s=s+",";
+//			}
+//		}
+//		s=s+"]";
+//		return s;
+		StringBuilder sb=new StringBuilder();
+		sb.append('[');
 		for(int i=0;i<arr.length;i++) {
-			s=s+arr[i];
+			sb.append(arr[i]);
 			if(i!=(arr.length-1)) {
-				s=s+",";
+				sb.append(',');
 			}
 		}
-		s=s+"]";
-		return s;
+		sb.append(']');
+		return sb.toString();
 	}
 }
