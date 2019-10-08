@@ -37,10 +37,11 @@ public class Student {
 	}
 	
 	 public Student(){
-		 System.out.println("student");
+		 //System.out.println("student");
 	 }
 	 
-	 public Student(int age) {
+	 public Student(String name,int age) {
+		 this.name=name;
 		 this.age=age;
 	 }
 }
