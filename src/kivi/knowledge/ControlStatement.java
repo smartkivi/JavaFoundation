@@ -10,12 +10,7 @@ public class ControlStatement {
 //		if(a==b) {
 //			System.out.println("a=b");
 //		}
-		
-//		if((a+b)%2==0) {
-//			System.out.println("ż��");
-//		}else {
-//			System.out.println("����");
-//		}
+
 		if(a>3)
 		{
 			s=a+1;

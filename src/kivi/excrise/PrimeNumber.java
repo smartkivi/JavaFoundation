@@ -8,7 +8,6 @@ public class PrimeNumber {
 		int sum=0;
 		for(int i=2;;i++) {
 			boolean flag=true;
-			//判断质数
 			for(int j=2;j<i;j++) {
 				if(i%j==0) {
 					flag=false;

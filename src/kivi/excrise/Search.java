@@ -6,7 +6,7 @@ public class Search {
 	public static void main(String[] args) {
 		int[] arr= {5,7,3,2,5};
 		Scanner sc=new Scanner(System.in);
-		System.out.println("输入要寻找的元素：");
+		System.out.println("please input the number:");
 		int goal=sc.nextInt();
 		int index=-1;
 		for(int i=0;i<arr.length;i++) {
@@ -15,7 +15,7 @@ public class Search {
 				break;
 			}
 		}
-		System.out.println("元素所在下标为："+index);
+		System.out.println("the index of the number:"+index);
 		sc.close();
 	}
 }

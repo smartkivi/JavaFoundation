@@ -8,22 +8,22 @@ public class IfExercise {
 		int max=(a>b)?a:b;
 		System.out.println(max);
 		if(max>=90 && max<=100) {
-			System.out.println("����");
+			System.out.println("A");
 		}
 		else if(max>=80 && max<90) {
-			System.out.println("��");
+			System.out.println("B");
 		}
 		else if(max>=70 && max<80) {
-			System.out.println("��");
+			System.out.println("C");
 		}
 		else if(max>=60 && max<70) {
-			System.out.println("����");
+			System.out.println("D");
 		}
 		else if(max<60) {
-			System.out.println("������");
+			System.out.println("E");
 		}
 		else {
-			System.out.println("�Ƿ�����");
+			System.out.println("invalid input");
 		}
 		sc.close();
 	}

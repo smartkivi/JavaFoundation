@@ -52,7 +52,7 @@ public class Method {
 	
 	public static void printEach(int num) {
 		if(num<1) {
-			System.out.println("�Ƿ�����");
+			System.out.println("no number");
 		}
 		else {
 			for(int i=1;i<=num;i++) {

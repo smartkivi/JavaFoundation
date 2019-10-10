@@ -33,9 +33,9 @@ public class ForExcrise {
 			sum=a*a*a+b*b*b+c*c*c;
 			if(sum==i) {
 				count++;
-				System.out.println("水仙花数:"+i);
+				System.out.println("Narcissus number:"+i);
 			}
 		}
-		System.out.println("水仙花数个数："+count);
+		System.out.println("total："+count);
 	}
 }

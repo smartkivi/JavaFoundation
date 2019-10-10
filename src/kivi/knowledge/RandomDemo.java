@@ -11,10 +11,10 @@ public class RandomDemo {
 			Scanner sc=new Scanner(System.in);
 			int x=sc.nextInt();
 			if(x==s) {
-				System.out.println("���");
+				System.out.println("OK!!!");
 				break;
 			}else {
-				System.out.println("�����");
+				System.out.println("not equal");
 			}
 			sc.close();
 		}

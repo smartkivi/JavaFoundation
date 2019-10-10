@@ -5,14 +5,14 @@ public class StudentManager {
 		ArrayList<Student> arr=new ArrayList<Student>();
 		
 		while(true) {
-			System.out.println("-----------欢迎来到学生管理系统---------");
-			System.out.println("1 查看所有学生");
-			System.out.println("2 添加学生");
-			System.out.println("3 删除学生");
-			System.out.println("4 修改学生");
-			System.out.println("5 退出");
+			System.out.println("-----------Welcome to the Student Manager System---------");
+			System.out.println("1 Browse");
+			System.out.println("2 Add");
+			System.out.println("3 Delete");
+			System.out.println("4 Modify");
+			System.out.println("5 Exit");
 			Scanner sc=new Scanner(System.in);
-			System.out.print("输入你的选择：");
+			System.out.print("please input your choice：");
 			int choice=sc.nextInt();
 			switch(choice) {
 				case 1:
@@ -36,7 +36,7 @@ public class StudentManager {
 	
 	public static void browse(ArrayList<Student> arr) {
 		if(arr.size()==0) {
-			System.out.println("没有学生数据");
+			System.out.println("no data");
 			return;
 		}
 		System.out.println("name\tage\t");
@@ -47,12 +47,12 @@ public class StudentManager {
 	
 	public static void add(ArrayList<Student> arr) {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("学生个数？");
+		System.out.println("the numbers of students？");
 		int total=sc.nextInt();
 		sc.nextLine();
 		for(int i=0;i<total;i++) {
 			Student stu=new Student();
-			System.out.println("请输入学生数据:");
+			System.out.println("please input students'data:");
 			while(true) {
 				boolean flag=true;
 				System.out.print("name:");
@@ -68,7 +68,7 @@ public class StudentManager {
 					stu.setName(str);
 					break;
 				}else {
-					System.out.println("请重新输入");
+					System.out.println("please input again");
 				}
 			}
 			
@@ -82,7 +82,7 @@ public class StudentManager {
 	
 	public static void delete(ArrayList<Student> arr) {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("请输入删除学生名字：");
+		System.out.println("please input the name of student：");
 		String str=sc.nextLine();
 		int index=-1;
 		for(int i=0;i<arr.size();i++) {
@@ -92,7 +92,7 @@ public class StudentManager {
 			}
 		}
 		if(index==-1) {
-			System.out.println("不存在该学生数据");
+			System.out.println("the student no exit");
 		}else {
 			arr.remove(index);
 		}
@@ -101,9 +101,9 @@ public class StudentManager {
 	public static void modify(ArrayList<Student> arr) {
 		Scanner sc=new Scanner(System.in);
 		Student stu=new Student();
-		System.out.println("请输入需要修改的学生名字");
+		System.out.println("please input the student of name");
 		String str=sc.nextLine();
-		System.out.println("需要修改的学生名字为"+str);		
+		System.out.println("name:"+str);		
 				
 		int index=-1;
 		for(int i=0;i<arr.size();i++) {
@@ -113,12 +113,12 @@ public class StudentManager {
 			}
 		}
 		if(index==-1) {
-			System.out.println("不存在该学生数据");
+			System.out.println("the student no exit");
 		}else {
-			System.out.println("请输入学生名字:");
+			System.out.println("please input student's name:");
 			String name=sc.nextLine();
 			stu.setName(name);
-			System.out.println("请输入学生年龄:");
+			System.out.println("please input student's age:");
 			int age=sc.nextInt();
 			stu.setAge(age);
 			arr.set(index,stu);

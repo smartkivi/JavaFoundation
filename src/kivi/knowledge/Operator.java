@@ -29,11 +29,11 @@ public class Operator {
 		int b=4;
 		int c=5;
 		
-		//两个比较大小
+		//compare two
 		boolean flag=(a==b)?true:false;
 		System.out.println("flag:"+flag);
 		
-		//三个数最大值
+		//three max
 		int temp=(a>b)?a:b;
 		int max=(temp>c)?temp:c;
 		System.out.println(max);

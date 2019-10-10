@@ -10,7 +10,6 @@ public class ArrayExcrise {
 		{
 			arr[i]=r.nextInt(100);
 		}
-		System.out.println("����Ԫ������Ϊ��");
 		int max=arr[0];
 		int min=arr[0];
 		for(int i=0;i<arr.length;i++)
