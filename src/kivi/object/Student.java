@@ -1,8 +1,26 @@
 package kivi.object;
 
 public class Student {
+	private String id;
+	private String address;
 	private String name;
 	private int age;
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
 	
 	public void setAge(int a) {
 		if(a<0||a>100) {
@@ -43,5 +61,12 @@ public class Student {
 	 public Student(String name,int age) {
 		 this.name=name;
 		 this.age=age;
+	 }
+	 
+	 public Student(String id,String name,int age,String address) {
+		 this.name=name;
+		 this.age=age;
+		 this.id=id;
+		 this.address=address;
 	 }
 }
