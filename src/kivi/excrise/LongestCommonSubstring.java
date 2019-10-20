@@ -26,5 +26,6 @@ public class LongestCommonSubstring {
 //				break;
 //			}
 		}
+		sc.close();
 	}
 }
