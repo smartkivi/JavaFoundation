@@ -7,5 +7,6 @@ public class UpLow {
 		String s1=s.substring(0,1);
 		String s2=s.substring(1);
 		System.out.println(s1.toUpperCase()+s2.toLowerCase());
+		sc.close();
 	}
 }

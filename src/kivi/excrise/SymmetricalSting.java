@@ -12,5 +12,6 @@ public class SymmetricalSting {
 		else {
 			System.out.println("not symmetry");
 		}
+		sc.close();
 	}
 }

@@ -11,7 +11,7 @@ public class WriteArrayListFile {
 		arr.add("five");
 		System.out.println(arr);
 		BufferedWriter bw=new BufferedWriter(new FileWriter("arraylist.txt"));
-		String str;
+		//String str;
 		for(int i=0;i<arr.size();i++) {
 			bw.write(arr.get(i));
 			bw.newLine();

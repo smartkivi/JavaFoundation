@@ -31,6 +31,7 @@ public class StudentSystemIOVersion {
 					exit();
 					break;
 			}
+			sc.close();
 		}
 	}
 		public static void browse(ArrayList<Student> arr) throws IOException{
@@ -127,6 +128,7 @@ public class StudentSystemIOVersion {
 			br.close();
 			br1.close();
 			bw.close();
+			sc.close();
 		}
 
 
@@ -146,6 +148,7 @@ public class StudentSystemIOVersion {
 			}else {
 				arr.remove(index);
 			}
+			sc.close();
 		}
 		
 		public static void modify(ArrayList<Student> arr) throws IOException{
@@ -173,6 +176,7 @@ public class StudentSystemIOVersion {
 				stu.setAge(age);
 				arr.set(index,stu);
 			}
+			sc.close();
 		}
 		
 		public static void exit() {

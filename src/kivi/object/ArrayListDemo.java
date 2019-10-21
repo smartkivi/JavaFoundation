@@ -44,5 +44,6 @@ public class ArrayListDemo {
 		for(int i=0;i<arr.size();i++) { 
 			System.out.println("name:"+arr.get(i).getName()+" age:"+arr.get(i).getAge());
 		}
+		sc.close();
 	}
 }

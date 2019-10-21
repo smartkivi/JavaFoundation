@@ -2,7 +2,7 @@ package kivi.excrise;
 import java.util.Scanner;
 public class StringTest {
 	public static void main(String[] args) {
-		String un="kivi";
+		//String un="kivi";
 		String pw="kivi";
 		Scanner sc=new Scanner(System.in);
 		System.out.print("please input your account:");
@@ -26,5 +26,6 @@ public class StringTest {
 				}
 			}
 		}
+		sc.close();
 	}
 }

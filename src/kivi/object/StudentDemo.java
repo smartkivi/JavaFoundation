@@ -16,7 +16,8 @@ public class StudentDemo {
 //		 System.out.println(stu.getName());
 //		 Teacher t=new Teacher();
 //		 t.test(stu);
-		Student[] stuArray=new Student[3];
+		
+		//Student[] stuArray=new Student[3];
 		
 	}
 }

@@ -56,10 +56,12 @@ public class ScannerToArrayListToFile {
 			stu.setAddress(str[3]);
 			arr1.add(stu);
 		}
+		br.close();
 		System.out.println("id\tname\tage\taddress\t");
 		for(int i=0;i<arr1.size();i++) {
 			System.out.println(arr1.get(i).getId()+"\t"+arr1.get(i).getName()+"\t"+arr1.get(i).getAge()+"\t"+arr1.get(i).getAddress());
 		}
+		sc.close();
 	}
 
 }
