@@ -70,9 +70,9 @@ public class StudentSystemIOVersion {
 				Student stu=new Student();
 				System.out.println("please input students'data:");
 				
-				//judge id
 				boolean loop=true;
 				while(loop) {
+					//judge id
 					boolean flag=true;
 					System.out.print("id:");
 					String id=sc.nextLine();
@@ -84,34 +84,32 @@ public class StudentSystemIOVersion {
 								break;
 							}
 					}
-					if(flag==true) {
-						stu.setId(id);
-						//judge name
-						boolean flag1=true;
-						while(true) {
-							System.out.print("name:");
-							String name=sc.nextLine();
-							String line1;
-							while((line1=br1.readLine())!=null) {
-									String[] strarr1=line1.split(",");
-									if(strarr1[1].equals(name)) {
-										flag1=false;
-										//System.out.println(strarr1.);
-										break;
-									}
-							}
-							if(flag1==true) {
-								stu.setName(name);
-								loop=false;
+					if(flag==false) {
+						System.out.println("please input again(incorrect id)");
+						continue;
+					}
+					stu.setId(id);
+					
+					//judge name
+					boolean flag1=true;
+					System.out.print("name:");
+					String name=sc.nextLine();
+					String line1;
+					while((line1=br1.readLine())!=null) {
+							String[] strarr1=line1.split(",");
+							if(strarr1[1].equals(name)) {
+								flag1=false;
 								break;
-							}else {
-								System.out.println("please input again(name)");
 							}
-						}
+					}
+					if(flag1==false) {
+						System.out.println("please input again(incorrect name)");
+						continue;
 					}else {
-						System.out.println("please input again(id)");
+						loop=false;
 					}
 				}
+
 
 				//input age and address;
 				System.out.print("age:");
