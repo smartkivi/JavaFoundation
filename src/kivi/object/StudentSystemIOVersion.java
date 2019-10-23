@@ -31,7 +31,6 @@ public class StudentSystemIOVersion {
 					exit();
 					break;
 			}
-			sc.close();
 		}
 	}
 		public static void browse(ArrayList<Student> arr) throws IOException{
@@ -59,23 +58,24 @@ public class StudentSystemIOVersion {
 		}
 		
 		public static void add(ArrayList<Student> arr) throws IOException{
-			Scanner sc=new Scanner(System.in);
-			BufferedReader br=new BufferedReader(new FileReader("threeStudents.txt"));
-			BufferedReader br1=new BufferedReader(new FileReader("threeStudents.txt"));
+			Scanner sc_add=new Scanner(System.in);
 			BufferedWriter bw=new BufferedWriter(new FileWriter("threeStudents.txt",true));
 			System.out.println("the numbers of students£¿");
-			int total=sc.nextInt();
-			sc.nextLine();
+			int total=sc_add.nextInt();
+			sc_add.nextLine();
 			for(int i=0;i<total;i++) {
 				Student stu=new Student();
 				System.out.println("please input students'data:");
 				
 				boolean loop=true;
 				while(loop) {
+					//search the whole file again
+					BufferedReader br=new BufferedReader(new FileReader("threeStudents.txt"));
+					BufferedReader br1=new BufferedReader(new FileReader("threeStudents.txt"));
 					//judge id
 					boolean flag=true;
 					System.out.print("id:");
-					String id=sc.nextLine();
+					String id=sc_add.nextLine();
 					String line;
 					while((line=br.readLine())!=null) {
 							String[] strarr=line.split(",");
@@ -93,7 +93,7 @@ public class StudentSystemIOVersion {
 					//judge name
 					boolean flag1=true;
 					System.out.print("name:");
-					String name=sc.nextLine();
+					String name=sc_add.nextLine();
 					String line1;
 					while((line1=br1.readLine())!=null) {
 							String[] strarr1=line1.split(",");
@@ -107,46 +107,68 @@ public class StudentSystemIOVersion {
 						continue;
 					}else {
 						loop=false;
+						stu.setName(name);
 					}
+					br.close();
+					br1.close();
 				}
 
 
 				//input age and address;
 				System.out.print("age:");
-				stu.setAge(sc.nextInt());
-				sc.nextLine();
+				stu.setAge(sc_add.nextInt());
+				sc_add.nextLine();
 				System.out.print("address:");
-				stu.setAddress(sc.nextLine());
+				stu.setAddress(sc_add.nextLine());
 				StringBuilder sb=new StringBuilder();
 				sb.append(stu.getId()).append(',').append(stu.getName()).append(',').append(stu.getAge()).append(',').append(stu.getAddress());
 				bw.write(sb.toString());
+				bw.newLine();
 				bw.flush();
 				//System.out.println(arr.size());
 			}
-			br.close();
-			br1.close();
 			bw.close();
-			sc.close();
 		}
 
 
 		public static void delete(ArrayList<Student> arr)throws IOException {
 			Scanner sc=new Scanner(System.in);
 			System.out.println("please input the name of student£º");
-			String str=sc.nextLine();
+			String name=sc.nextLine();
+			
+			BufferedReader br=new BufferedReader(new FileReader("threeStudents.txt"));
+			String line;
+			while((line=br.readLine())!=null) {
+				Student stu=new Student();
+				String[] str=line.split(",");
+				stu.setId(str[0]);
+				stu.setName(str[1]);
+				stu.setAge(Integer.valueOf(str[2]));
+				stu.setAddress(str[3]);
+				arr.add(stu);
+			}
+			br.close();
 			int index=-1;
 			for(int i=0;i<arr.size();i++) {
 				Student s=arr.get(i);
-				if(s.getName().equals(str)) {
+				if(s.getName().equals(name)) {
 					index=i;
+					arr.remove(i);
 				}
 			}
 			if(index==-1) {
 				System.out.println("the student no exit");
 			}else {
-				arr.remove(index);
+				BufferedWriter bw=new BufferedWriter(new FileWriter("threeStudents.txt"));
+				for(int i=0;i<arr.size();i++) {
+					//System.out.println(i);
+					StringBuilder sb=new StringBuilder();
+					sb.append(arr.get(i).getId()).append(',').append(arr.get(i).getName()).append(',').append(arr.get(i).getAge()).append(',').append(arr.get(i).getAddress());
+					bw.write(sb.toString());
+					bw.newLine();
+				}
+				bw.close();
 			}
-			sc.close();
 		}
 		
 		public static void modify(ArrayList<Student> arr) throws IOException{
@@ -174,7 +196,6 @@ public class StudentSystemIOVersion {
 				stu.setAge(age);
 				arr.set(index,stu);
 			}
-			sc.close();
 		}
 		
 		public static void exit() {
